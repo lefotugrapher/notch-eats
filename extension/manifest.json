@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Notch Eats",
+  "version": "0.3.0",
+  "description": "Sends your Uber Eats order ETA, PIN and courier position to the Notch Eats Mac app.",
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["http://127.0.0.1:47321/*", "https://*.ubereats.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://*.ubereats.com/*"],
+      "js": ["hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://*.ubereats.com/*"],
+      "js": ["parse.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "Notch Eats" }
+}

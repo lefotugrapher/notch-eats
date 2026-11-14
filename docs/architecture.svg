@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250" role="img" aria-label="Architecture: Uber Eats page to browser extension to local server to notch app.">
+  <title>How Notch Eats works</title>
+  <style>
+    .f { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+    .box { fill: #14181c; stroke: #2c333a; stroke-width: 1.5; }
+    .h { fill: #fff; font-size: 14px; font-weight: 600; }
+    .s { fill: #9aa5b1; font-size: 11px; }
+    .flow { stroke: #06C167; stroke-width: 2.5; stroke-dasharray: 6 6; fill: none; animation: dash 1s linear infinite; }
+    .head { fill: #06C167; }
+    @keyframes dash { to { stroke-dashoffset: -12; } }
+  </style>
+  <rect width="800" height="250" rx="16" fill="#0b0e11"/>
+
+  <rect class="box" x="24" y="60" width="164" height="110" rx="12"/>
+  <text class="f h" x="106" y="96" text-anchor="middle">Uber Eats tab</text>
+  <text class="f s" x="106" y="116" text-anchor="middle">page text</text>
+  <text class="f s" x="106" y="132" text-anchor="middle">its own API JSON</text>
+
+  <rect class="box" x="226" y="60" width="164" height="110" rx="12"/>
+  <text class="f h" x="308" y="90" text-anchor="middle">Browser extension</text>
+  <text class="f s" x="308" y="110" text-anchor="middle">parser (ETA, PIN, courier)</text>
+  <text class="f s" x="308" y="126" text-anchor="middle">background poller keeps it</text>
+  <text class="f s" x="308" y="142" text-anchor="middle">live in sleeping tabs</text>
+
+  <rect class="box" x="428" y="60" width="164" height="110" rx="12"/>
+  <text class="f h" x="510" y="96" text-anchor="middle">127.0.0.1:47321</text>
+  <text class="f s" x="510" y="116" text-anchor="middle">loopback only</text>
+  <text class="f s" x="510" y="132" text-anchor="middle">JSON over HTTP</text>
+
+  <rect class="box" x="630" y="60" width="146" height="110" rx="12"/>
+  <text class="f h" x="703" y="90" text-anchor="middle">Notch app</text>
+  <text class="f s" x="703" y="110" text-anchor="middle">SwiftUI pill + card</text>
+  <text class="f s" x="703" y="126" text-anchor="middle">MapKit map, sounds</text>
+  <text class="f s" x="703" y="142" text-anchor="middle">hover or 10 s alert</text>
+
+  <path class="flow" d="M188 115 H218"/><polygon class="head" points="226,115 216,110 216,120"/>
+  <path class="flow" d="M390 115 H420"/><polygon class="head" points="428,115 418,110 418,120"/>
+  <path class="flow" d="M592 115 H622"/><polygon class="head" points="630,115 620,110 620,120"/>
+
+  <text class="f s" x="400" y="214" text-anchor="middle">Nothing leaves your Mac except the page's own requests to Uber. The app listens on loopback only.</text>
+</svg>
