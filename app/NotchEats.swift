@@ -489,6 +489,7 @@ struct NotchView: View {
                         .foregroundStyle(.white.opacity(0.55))
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
+                        .padding(.leading, 18)   // line up under the status text, not under the icon
                 }
             }
             .padding(.leading, 16)
