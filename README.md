@@ -3,7 +3,7 @@
 A live Uber Eats tracker for the MacBook notch. Order, switch to YouTube or work in another tab, and the notch tells you when your food is close, shows who is bringing it, and drops down the delivery PIN in huge digits when the courier is about 10 seconds away.
 
 <p align="center">
-  <img src="docs/hero.svg" alt="Animated demo of Notch Eats" width="760">
+  <img src="docs/hero-v2.svg" alt="Animated demo of Notch Eats" width="760">
 </p>
 
 > The animation uses made-up data. It loops through: collapsed pill, hover card, PIN drop-down, delivered tick.
